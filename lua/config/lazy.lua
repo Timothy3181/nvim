@@ -36,4 +36,5 @@ require("lazy").setup({
     "akinsho/toggleterm.nvim",
     "akinsho/bufferline.nvim",
     "Civitasv/cmake-tools.nvim",
+    "ray-x/lsp_signature.nvim",
 })

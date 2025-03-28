@@ -22,6 +22,7 @@ require("plugins.nvim-tree")
 require("plugins.toggleterm")
 require("plugins.bufferline")
 require("plugins.cmake-tools")
+require("plugins.lsp-signature")
 
 -- after launch settings
 require("config.bufferline-reset")
