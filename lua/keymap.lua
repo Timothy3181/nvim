@@ -6,6 +6,8 @@ local keyset = vim.keymap.set
 
 -- nvim
 keyset("n", "<leader>s", "<cmd>w<CR>", { silent = true, noremap = true })
+keyset("n", "<leader>j", "10j", {})
+keyset("n", "<leader>k", "10k", {})
 
 -- lazy
 keyset("n", "<leader>ll", "<cmd>Lazy<CR>", { silent = true, noremap = true })

@@ -9,7 +9,7 @@ local cfg = {
     hint_scheme = "String",
     handler_opts = {
         border = "rounded",
-        max_width = 80,
+        max_width = 60,
     },
     always_trigger = false,
     auto_close_after = nil,
