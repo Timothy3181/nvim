@@ -37,4 +37,12 @@ require("lazy").setup({
     "akinsho/bufferline.nvim",
     "Civitasv/cmake-tools.nvim",
     "ray-x/lsp_signature.nvim",
+    "nosduco/remote-sshfs.nvim",
+    "lukas-reineke/indent-blankline.nvim",
+    "rcarriga/nvim-notify",
+    {
+        "goolord/alpha-nvim",
+        event = "VimEnter",
+        config = require("plugins.dash_board"),
+    },
 })

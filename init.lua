@@ -23,6 +23,9 @@ require("plugins.toggleterm")
 require("plugins.bufferline")
 require("plugins.cmake-tools")
 require("plugins.lsp-signature")
+require("plugins.remote-sshfs")
+require("plugins.ibl")
+require("plugins.nvim-notify")
 
 -- after launch settings
 require("config.bufferline-reset")
