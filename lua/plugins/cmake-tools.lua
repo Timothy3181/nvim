@@ -65,7 +65,7 @@ require("cmake-tools").setup {
     runner = { enabled = true },
     executor = { enabled = true },
     spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
-    refresh_rate_ms = 100,
+    refresh_rate_ms = 0,
   },
   cmake_virtual_text_support = true,
 }
