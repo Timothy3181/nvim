@@ -23,7 +23,7 @@ keyset("n", "<leader>q", "<cmd>wincmd p<CR>", { silent = true, noremap = true })
 keyset("n", "<leader>ms", "<cmd>lua vim.lsp.buf.hover()<CR>", { silent = true, noremap = true })
 
 -- toggleterm
-keyset("n", "<leader>tt", "<cmd>ToggleTerm direction=float<CR>", { silent = true, noremap = true })
+keyset("n", "<leader>tt", "<cmd>ToggleTerm direction=horizontal<CR>", { silent = true, noremap = true })
 
 -- bufferline
 keyset("n", "<leader>x", "<cmd>BufferLineCycleNext<CR>", { silent = true, noremap = true })

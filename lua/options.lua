@@ -1,4 +1,5 @@
 local opts = {
+    showmode = false,
     backup = false,
     clipboard = "unnamedplus",
     cmdheight = 1,

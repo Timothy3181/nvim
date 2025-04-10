@@ -45,4 +45,6 @@ require("lazy").setup({
         event = "VimEnter",
         config = require("plugins.dash_board"),
     },
+    "MunifTanjim/nui.nvim",
+    "folke/noice.nvim",
 })

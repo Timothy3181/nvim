@@ -26,6 +26,7 @@ require("plugins.lsp-signature")
 require("plugins.remote-sshfs")
 require("plugins.ibl")
 require("plugins.nvim-notify")
+require("plugins.noice")
 
 -- after launch settings
 require("config.bufferline-reset")

@@ -9,5 +9,5 @@ require('mason').setup({
 })
 
 require('mason-lspconfig').setup({
-    ensure_installed = { 'pyright', 'lua_ls', 'rust_analyzer', 'clangd', 'cmake', 'yamlls' },
+    ensure_installed = { 'pyright', 'lua_ls', 'rust_analyzer', 'clangd', 'cmake', 'yamlls', 'html' },
 })
