@@ -15,6 +15,7 @@ require("lsp.lua_ls")
 require("lsp.clangd")
 require("lsp.pyright")
 require("lsp.rust-analyzer")
+require("lsp.cmake")
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
     callback = function(event)
