@@ -9,6 +9,7 @@
 - Comment.nvim
 - indent-blankline.nvim
 - lualine.nvim
+- lazygit.nvim
 - mason.nvim
 - mason-tool-installer.nvim
 - nvim-autopairs
@@ -18,6 +19,7 @@
 - nvim-treesitter-context
 - nvim-web-divicons
 - py_lsp.nvim
+- render-markdown.nvim
 - toggleterm.nvim
 ## LSP
 - Clangd
@@ -25,6 +27,7 @@
 - Rust-Analyzer
 - Pyright
 - Vim-Language-Server
+- Lemmits
 ## DAP
 Haven't completed yet.
 ## Formatter
