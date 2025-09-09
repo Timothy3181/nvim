@@ -102,6 +102,7 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'WhoIsSethDaniel/mason-tool-installer.nvim'
 Plug 'MeanderingProgrammer/render-markdown.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 
 call plug#end()
 
@@ -579,4 +580,9 @@ require('render-markdown').setup {
     quote = { repeat_linebreak = true },
     sign = { enabled = false },
 }
+EOF
+
+" gitsigns
+lua << EOF
+require('gitsigns').setup {}
 EOF
