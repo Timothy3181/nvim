@@ -101,6 +101,7 @@ Plug 'utilyre/barbecue.nvim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'WhoIsSethDaniel/mason-tool-installer.nvim'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
 
 call plug#end()
 
@@ -143,7 +144,7 @@ EOF
 " clangd
 lua << EOF
 vim.lsp.config['clangd'] = {
-    cmd = { 'clangd' },
+    cmd = { 'clangd', '--header-insertion=never' },
     filetypes = { 'c', 'cpp', 'cuda', 'cxx', 'hxx', 'cc', 'h', 'hpp' },
     root_markers = {
         '.clangd',
@@ -360,6 +361,16 @@ vim.lsp.config["rust-analyzer"] = {
 vim.lsp.enable("rust-analyzer")
 EOF
 
+" xml
+lua << EOF
+vim.lsp.config["lemminx"] =  {
+  cmd = { 'lemminx' },
+  filetypes = { 'xml', 'xsd', 'xsl', 'xslt', 'svg', 'urdf' },
+  root_markers = { '.git' },
+}
+vim.lsp.enable("lemminx")
+EOF
+
 " theme settion
 colorscheme catppuccin_mocha
 
@@ -378,7 +389,7 @@ lua << EOF
 require'nvim-treesitter.configs'.setup {
     auto_install = true,
     sync_install = false,
-    ensure_installed = { "c", "lua", "vim", "rust", "cpp", "markdown", "markdown_inline" },
+    ensure_installed = { "c", "lua", "vim", "rust", "cpp", "markdown", "markdown_inline", "xml" },
     highlight = {
         enable = true,
     },
@@ -418,7 +429,8 @@ require('mason-tool-installer').setup {
         'pyright',
         'cmake-language-server',
         'vim-language-server',
-        'rust-analyzer'
+        'rust-analyzer',
+        'lemminx'
     },
     auto_update = true,
     run_on_start = true,
@@ -432,7 +444,7 @@ lua << EOF
 local nvim_lsp = vim.lsp
 require("py_lsp").setup {
     language_server = "pyright",
-    host_python = "C:\\Users\\harry\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    host_python = "/opt/anaconda3/bin/python",
     default_venv_name = ".venv",
 }
 EOF
@@ -557,3 +569,14 @@ require("toggleterm").setup {
 EOF
 nnoremap <C-t> :ToggleTerm<CR>
 tnoremap <C-t> <C-\><C-n>:ToggleTerm<CR>
+
+" render-markdown
+lua << EOF
+require('render-markdown').setup {
+    heading = { position = 'inline' },
+    bullet = { icons = { '', '' } },
+    checkbox = { checked = { scope_highlight = '@markup.strikethrough' } },
+    quote = { repeat_linebreak = true },
+    sign = { enabled = false },
+}
+EOF
