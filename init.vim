@@ -85,6 +85,7 @@ call plug#begin()
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'windwp/nvim-autopairs'
@@ -103,6 +104,7 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'WhoIsSethDaniel/mason-tool-installer.nvim'
 Plug 'MeanderingProgrammer/render-markdown.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'kdheepak/lazygit.nvim'
 
 call plug#end()
 
@@ -586,3 +588,6 @@ EOF
 lua << EOF
 require('gitsigns').setup {}
 EOF
+
+" lazygit
+nnoremap <LEADER>lg :LazyGit<CR>
