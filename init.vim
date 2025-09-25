@@ -364,6 +364,17 @@ vim.lsp.config["rust-analyzer"] = {
 vim.lsp.enable("rust-analyzer")
 EOF
 
+" java-language-server
+lua << EOF
+vim.lsp.config["java-language-server"] = {
+    filetypes = { 'java' },
+    root_markers = { 'build.gradle', 'build.gradle.kts', 'pom.xml', '.git' },
+    settings = {},
+}
+
+vim.lsp.enable("java-language-server")
+EOF
+
 " xml
 lua << EOF
 vim.lsp.config["lemminx"] =  {
@@ -433,7 +444,8 @@ require('mason-tool-installer').setup {
         'cmake-language-server',
         'vim-language-server',
         'rust-analyzer',
-        'lemminx'
+        'lemminx',
+        'java-language-server'
     },
     auto_update = true,
     run_on_start = true,
