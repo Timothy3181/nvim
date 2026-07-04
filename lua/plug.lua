@@ -53,6 +53,21 @@ vim.lsp.config('lua_ls', {
     },
 })
 vim.lsp.enable('lua_ls')
+-- cmake
+vim.lsp.config('cmake', {
+    cmd = { 'cmake-language-server' },
+    filetypes = { 'cmake' },
+    root_markers = {
+        'CMakePresets.json',
+        'CTestConfig.cmake',
+        '.git',
+        'CMakeLists.txt',
+    },
+    init_options = {
+        buildDirectory = 'build',
+    },
+})
+vim.lsp.enable('cmake')
 -- diagnostics setting
 vim.diagnostic.config({
     virtual_text = true,
