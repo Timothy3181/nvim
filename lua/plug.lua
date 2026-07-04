@@ -16,6 +16,8 @@ require("nvim-treesitter").install { 'c', 'cpp', 'python', 'lua' }
 ---- lsp config
 vim.pack.add({
     { src = "https://github.com/neovim/nvim-lspconfig" },
+}, {
+    load = true,
 })
 -- python
 vim.lsp.config('pyright', {
@@ -89,10 +91,11 @@ require('nvim-tree').setup({})
 vim.pack.add({
     { src = 'https://github.com/saghen/blink.lib', version = 'main' },
     { src = 'https://github.com/saghen/blink.cmp', version = 'main' },
+}, {
+    load = true,
 })
 
 local cmp = require('blink.cmp')
-cmp.build():pwait()
 cmp.setup({
     keymap = { preset = 'super-tab' },
     completion = {
