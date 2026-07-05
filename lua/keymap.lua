@@ -15,7 +15,7 @@ vim.keymap.set('n', '<leader>j', '<C-w>j', opts)
 vim.keymap.set('n', '<leader>k', '<C-w>k', opts)
 vim.keymap.set('n', '<leader>l', '<C-w>l', opts)
 
-vim.keymap.set('n', '<C-s>', 'w<CR>', opts)
+vim.keymap.set('n', '<C-s>', ':w<CR>', opts)
 
 -- plugin key
 vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
