@@ -9,6 +9,7 @@ local parsers = {
     "markdown",
     "markdown_inline",
     "yaml",
+    "html",
 }
 
 local filetypes = {
