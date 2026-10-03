@@ -33,6 +33,7 @@ local opts = {
     sidescrolloff = 8,
     spell = false,
     laststatus = 3,
+    showtabline = 0,
     autoindent = true,
 }
 

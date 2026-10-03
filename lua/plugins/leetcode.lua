@@ -1,19 +1,12 @@
 return {
     "kawre/leetcode.nvim",
     cmd = "Leet",
-    keys = {
-        {
-            "<leader>ll",
-            "<cmd>Leet<cr>",
-            desc = "LeetCode",
-        },
-    },
     dependencies = {
         "nvim-lua/plenary.nvim",
         "MunifTanjim/nui.nvim",
     },
     opts = {
-        lang = "cpp",
+        lang = "c",
         cn = {
             enabled = true,
             translator = true,
